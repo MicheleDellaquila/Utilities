@@ -17,6 +17,5 @@ modelli, script o risorse, sei il benvenuto! Ecco come puoi farlo:
 
 Remember to follow the style guidelines of the repository and keep the documentation up-to-date for any new features or resources added.
 
-## Licenza
-This repository is distributed under the MIT license, which means you are free to use the code here in your personal or commercial projects. For more details, see the file [LICENSE](https://github.com/MicheleDellaquila/Utilits/blob/main/LICENSE)
+
 
