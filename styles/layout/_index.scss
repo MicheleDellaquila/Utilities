@@ -1,0 +1,34 @@
+@import "./variables";
+@import "./mixins/mixins";
+
+/* flexbox class */
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* grid system */
+.container {
+  @include container();
+}
+
+/* row */
+.row {
+  @include row();
+}
+
+/* column creation */
+@each $breakpoint, $value in $grid-breakpoints {
+  @for $i from 1 through $grid-columns {
+    @media (min-width: $value) {
+      @include col($breakpoint, $i);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+/* reset html */
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* reset default behavior */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* reset media */
+picture,
+video,
+canvas,
+svg,
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* reset text */
+h1,
+h2 {
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -5px;
+  overflow-wrap: break-word;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -5px;
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+/* reset form elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* reset form components */
+input,
+textarea {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  display: inline-block;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+}
+
+/* reset anchor tag */
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* reset table */
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+}
