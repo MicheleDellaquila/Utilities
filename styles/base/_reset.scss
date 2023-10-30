@@ -67,3 +67,11 @@ table {
   border-spacing: 0;
   overflow: hidden;
 }
+
+/* disable animations */
+@media (prefers-reduce-motion: reduce) {
+  * {
+    transition-duration: 0 !important;
+    animation-duration: 0 !important;
+  }
+}
