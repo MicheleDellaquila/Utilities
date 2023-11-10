@@ -22,10 +22,20 @@ body {
 }
 
 /* Set image responsive */
-:is(picture, video, canvas, svg, img) {
+:is(picture, video, canvas, svg) {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  shape-margin: 0.75rem;
 }
 
 /* Balance text wrapping on headings + Prevent text from overflowing */
