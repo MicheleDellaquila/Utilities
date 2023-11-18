@@ -1,0 +1,10 @@
+.Table {
+  overflow: auto;
+}
+
+.Table__table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
