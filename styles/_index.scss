@@ -1,23 +1,21 @@
-@import "./base/reset";
-@import "./layout/index";
+@import './base/reset';
+@import './layout/index';
 
 /* variable css */
 :root {
-  /* primary */
-  --primary-50: #ebfff9;
-  --primary-100: #d6fff2;
-  --primary-200: #b8edd7;
-  --primary-500: #00b27a;
-  --primary-700: #008f62;
-  --primary-800: #006646;
+}
 
-  /* grayscale */
-  --gray-50: #f9fafb;
-  --gray-200: #eaecf0;
-  --gray-300: #d0d5dd;
-  --gray-500: #667085;
-  --gray-600: #475467;
-  --gray-700: #344054;
-  --gray-800: #1d2939;
-  --gray-900: #101828;
+/* set background color */
+body {
+}
+
+/* modify selection text style */
+::selection {
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }

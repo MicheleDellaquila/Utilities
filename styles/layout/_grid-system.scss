@@ -1,0 +1,86 @@
+@use 'sass:map';
+@import './variables';
+@import './functions/functions';
+
+/* generate grid system */
+@each $breakpoint, $value in $grid-breakpoints {
+  @media (min-width: $value) {
+    .container {
+      width: 100%;
+      max-width: valueMap($container-max-widths, $breakpoint);
+    }
+  }
+}
+
+.row {
+  --gutter-x: 3rem;
+  --gutter-y: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: calc(var(--gutter-y) * -1);
+  margin-inline: calc(var(--gutter-x) * -0.5);
+
+  & > * {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: calc(var(--gutter-x) * 0.5);
+    margin-top: var(--gutter-y);
+  }
+}
+
+/* generate columns */
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: calc((100% / $grid-columns) * $i);
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @for $i from 1 through $grid-columns {
+    @media (min-width: $value) {
+      .col-#{$breakpoint}-#{$i} {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: calc((100% / $grid-columns) * $i);
+      }
+    }
+  }
+}
+
+/* generate gutter */
+@each $key, $value in $gutter {
+  .g-#{$key},
+  .gy-#{$key} {
+    --gutter-y: #{$value};
+  }
+
+  .g-#{$key},
+  .gx-#{$key} {
+    --gutter-x: #{$value};
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @each $key, $g-value in $gutter {
+    @media (min-width: $value) {
+      .g-#{$breakpoint}-#{$key},
+      .gy-#{$breakpoint}-#{$key} {
+        --gutter-y: #{$g-value};
+      }
+
+      .g-#{$breakpoint}-#{$key},
+      .gx-#{$breakpoint}-#{$key} {
+        --gutter-x: #{$g-value};
+      }
+    }
+  }
+}
