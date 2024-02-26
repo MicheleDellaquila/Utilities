@@ -1,0 +1,27 @@
+.Input {
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--grayscale-color-300);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 0 3rem var(--grayscale-color-50) inset;
+
+  &::placeholder {
+    color: var(--grayscale-color-700);
+  }
+
+  &:focus-visible {
+    border: 1px solid var(--primary-color-400);
+    box-shadow: 0 0 0 0.4rem rgba($color: var(--input-colorRgb-focus), $alpha: 0.5),
+      0 0 0 3rem var(--grayscale-color-50) inset;
+  }
+
+  &--error {
+    border: 1px solid var(--feedbackRed-color-500);
+    caret-color: var(--feedbackRed-color-500);
+
+    &:focus-visible {
+      border: 1px solid var(--feedbackRed-color-500);
+      box-shadow: 0 0 0 0.4rem rgba($color: var(--input-colorRgb-error), $alpha: 0.5);
+    }
+  }
+}

@@ -4,3 +4,28 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    z-index: 1000;
+    background-color: var(--grayscale-color-100);
+    padding: 10px;
+  }
+}

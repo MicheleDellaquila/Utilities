@@ -1,0 +1,17 @@
+.Searchbar {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    inset-block-start: 1.6rem;
+    inset-inline-start: 1.6rem;
+    font-size: 2.4rem;
+    color: var(--secondary-color-500);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.6rem 5.2rem;
+    border-radius: 3.2rem;
+  }
+}

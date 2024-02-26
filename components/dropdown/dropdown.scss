@@ -1,0 +1,12 @@
+.Dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  min-width: 16rem;
+  background-color: var(--grayscale-color-50);
+  border: 1px solid var(--grayscale-color-200);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1.2rem 0 rgba($color: var(--dropdown-shadowColor-rgb), $alpha: 0.1);
+  z-index: 8;
+}

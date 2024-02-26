@@ -1,0 +1,47 @@
+.Textarea {
+  min-height: 14rem;
+  padding: 1.6rem;
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: 1px solid var(--grayscale-color-300);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 0 8rem var(--grayscale-color-50) inset;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    color: var(--grayscale-color-700);
+  }
+
+  &:focus-visible {
+    border: 1px solid var(--primary-color-400);
+    box-shadow: 0 0 0 0.4rem rgba($color: var(--input-colorRgb-focus), $alpha: 0.5),
+      0 0 0 8rem var(--grayscale-color-50) inset;
+  }
+
+  &--error {
+    border: 1px solid var(--feedbackRed-color-500);
+    caret-color: var(--feedbackRed-color-500);
+
+    &:focus-visible {
+      border: 1px solid var(--feedbackRed-color-500);
+      box-shadow: 0 0 0 0.4rem rgba($color: var(--input-colorRgb-error), $alpha: 0.5);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:placeholder-shown + [data-state='disabled'] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  & + .AudioRecorder[data-state='disabled'] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

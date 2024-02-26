@@ -1,0 +1,15 @@
+.FieldLabel {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--grayscale-color-800);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  -webkit-margin-after: 0.5rem;
+  margin-block-end: 0.8rem;
+
+  &__required {
+    color: var(--feedbackRed-color-500);
+    -webkit-margin-start: 0.4rem;
+    margin-inline-start: 0.4rem;
+  }
+}
