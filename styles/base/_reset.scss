@@ -111,7 +111,9 @@ table {
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     opacity: 1;
   }
 }
