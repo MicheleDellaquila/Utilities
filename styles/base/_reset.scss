@@ -100,10 +100,13 @@ table {
 }
 
 /* disable animations */
-@media (prefers-reduce-motion: reduce) {
-  * {
-    transition-duration: 0;
-    animation-duration: 0;
+@media (prefers-reduced-motion) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
 
