@@ -1,31 +1,21 @@
-/* reset default styles browser */
 *,
 *::after,
 *::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  // remove highlight on safari
-  -webkit-tap-highlight-color: transparent;
 }
 
-/* Prevent font size inflation + set core font-size */
 html {
   font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Set image responsive */
@@ -75,6 +65,11 @@ img {
   -moz-appearance: none;
 }
 
+/* set the cursor to pointer in input checkbox or radio */
+:is(input[type="checkbox"], input[type="radio"]) {
+  cursor: pointer;
+}
+
 /* Allow only resize vertical on textarea */
 textarea {
   resize: vertical;
@@ -99,21 +94,15 @@ table {
   overflow: hidden;
 }
 
-/* disable animations */
-@media (prefers-reduced-motion) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0s !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+/* Accessibility features */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  *,
-  *::before,
-  *::after {
+  :root {
     opacity: 1;
   }
 }
